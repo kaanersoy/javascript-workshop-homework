@@ -1,8 +1,9 @@
-// import { Room } from '../room/room'
+import { Room } from '../room/room'
 
 export class User {
   id: string;
   name: string;
+  room?: Room
   constructor (id: string, name: string) {
     this.id = id
     this.name = name
@@ -18,5 +19,9 @@ export class User {
 
   static get (id: string) {
     return User.allUsers.find(u => u.id === id)
+  }
+
+  getRoom () {
+    return this.room
   }
 }
