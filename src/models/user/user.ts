@@ -17,9 +17,6 @@ export class User {
   }
 
   static get (id: string) {
-  }
-
-  static AddUserItself () {
-
+    return User.allUsers.find(u => u.id === id)
   }
 }
