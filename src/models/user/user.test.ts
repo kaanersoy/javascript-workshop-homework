@@ -12,6 +12,7 @@ describe('[user.ts]', () => {
     expect(cagatay instanceof User).toBe(true)
 
     // Test static functions
+    expect(User.get(cagatay.id)).toStrictEqual(cagatay)
     expect(User.all()).toStrictEqual([cagatay, esma])
     expect(cagatay.getRoom()).toStrictEqual(testRoom)
   })
