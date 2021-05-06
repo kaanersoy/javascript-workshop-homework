@@ -55,4 +55,12 @@ export class Room {
   smile (user: User) {
     return `${user.name} smiled`
   }
+
+  close (user: User) {
+    if (this.members[0] === user) {
+      Room.allRoomInstances = Room.allRoomInstances.filter(room => room !== this)
+      return true
+    }
+    return false
+  }
 }
