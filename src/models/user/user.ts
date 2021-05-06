@@ -6,7 +6,7 @@ export class User {
   constructor (id: string, name: string) {
     this.id = id
     this.name = name
-    User.allUsers = [...User.allUsers, this]
+    User.allUsers.push(this)
   }
 
   // For assign and return all users
